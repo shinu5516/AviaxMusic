@@ -21,7 +21,7 @@ import time
 
 # ✅ Configurable constants
 API_KEY = "FF7gDUpfpXkk4YVrlXDOAPpT"
-API_BASE_URL = "http://deadlinetech.site"
+API_BASE_URL = "http://165.22.208.11:5000"
 
 MIN_FILE_SIZE = 51200
 
@@ -43,7 +43,7 @@ def extract_video_id(link: str) -> str:
 
 
 def api_dl(video_id: str) -> str | None:
-    api_url = f"{API_BASE_URL}:8080/download/song/{video_id}?key={API_KEY}"
+    api_url = f"{API_BASE_URL}/download/song/{video_id}?key={API_KEY}"
     file_path = os.path.join("downloads", f"{video_id}.mp3")
 
     # ✅ Check if already downloaded
